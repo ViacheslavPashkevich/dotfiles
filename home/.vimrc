@@ -1,11 +1,6 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-" When vimrc, either directly or via symlink, is edited, automatically reload it
-autocmd! bufwritepost .vimrc source ~/.vimrc
-autocmd! bufwritepost vimrc source ~/.vimrc
-autocmd! bufwritepost bundles.vim source ~/.vimrc
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -27,8 +22,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'lunaru/vim-twig'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'mileszs/ack.vim'
-
-
+" Surrounding parentheses, braces, quotes and so on.
+Bundle 'tpope/vim-surround'
 
 " vim-scripts repos
 Bundle 'L9'
@@ -51,6 +46,19 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
+
+
+" === End of vundle config. ===
+
+
+" Enable matchit.vim plugin to make mathch parentheses command (%) work with ruby 
+" specific constructions.
+runtime macros/matchit.vim 
+
+" When vimrc, either directly or via symlink, is edited, automatically reload it
+autocmd! bufwritepost .vimrc source ~/.vimrc
+autocmd! bufwritepost vimrc source ~/.vimrc
+autocmd! bufwritepost bundles.vim source ~/.vimrc
 
 syntax enable
 
@@ -116,6 +124,9 @@ noremap <S-tab> :bp<CR>
 
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+" expand %% to %:h (current buffer's directory for :edit command)
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 map <C-\> :NERDTreeToggle<CR>
 map <C-Tab> :BufExplorer<CR>
