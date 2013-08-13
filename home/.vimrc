@@ -119,7 +119,7 @@ set wildmode=full
 " Save on focus lost
 autocmd FocusLost * :wa
 
-noremap <tab> :b#<CR>
+" noremap <tab> :b#<CR>
 noremap <S-tab> :bp<CR>
 
 cnoremap <C-p> <Up>
