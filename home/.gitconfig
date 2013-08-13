@@ -1,4 +1,5 @@
 [alias]
+        c = commit
 	cm = commit -m
 	cam = commit -a -m
 	st = status
