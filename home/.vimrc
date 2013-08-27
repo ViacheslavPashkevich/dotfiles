@@ -98,7 +98,6 @@ set shiftwidth=2
 " go to the first match as you type
 set incsearch
 set hlsearch
-set ignorecase
 
 " Override the 'ignorecase' if the search pattern contains upper case characters
 set smartcase 
@@ -130,3 +129,5 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 map <C-\> :NERDTreeToggle<CR>
 map <C-Tab> :BufExplorer<CR>
+
+map <Leader>f :NERDTreeFind<CR>
