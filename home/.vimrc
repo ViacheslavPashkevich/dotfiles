@@ -15,6 +15,7 @@ Bundle 'gmarik/vundle'
 " Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-bundler.git'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-haml'
 Bundle 'slim-template/vim-slim'
