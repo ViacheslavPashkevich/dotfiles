@@ -25,6 +25,8 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'mileszs/ack.vim'
 " Surrounding parentheses, braces, quotes and so on.
 Bundle 'tpope/vim-surround'
+" Pretty statusline
+Bundle 'Lokaltog/powerline'
 
 " vim-scripts repos
 Bundle 'L9'
@@ -82,12 +84,8 @@ set guioptions-=r
 set guioptions-=L
 
 " status line
-set statusline=
-set statusline+=%#LineNr#
-set statusline+=%{expand('%:h')}/
-set statusline+=%#StatusLine#
-set statusline+=%t
-set statusline+=%#NonText#
+set laststatus=2
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 " 2 spaces per tab
 set autoindent
