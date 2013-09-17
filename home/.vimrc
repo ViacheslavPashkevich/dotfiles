@@ -79,9 +79,11 @@ set listchars=eol:¬,extends:»,tab:▸\ ,trail:›
 " don't highlight current cursor line number 
 highlight clear CursorLineNr
 
-" hide scrollbars
+" hide [r,L] - scrollbars, [T] - toolbar, [m] - menu
 set guioptions-=r
 set guioptions-=L
+set guioptions-=T
+set guioptions-=m
 
 " status line
 set laststatus=2
