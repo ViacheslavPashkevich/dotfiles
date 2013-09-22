@@ -122,6 +122,9 @@ autocmd FocusLost * :wa
 " noremap <tab> :b#<CR>
 noremap <S-tab> :bp<CR>
 
+" hide search selection on <C-l>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
@@ -132,3 +135,5 @@ map <C-\> :NERDTreeToggle<CR>
 map <C-Tab> :BufExplorer<CR>
 
 map <Leader>f :NERDTreeFind<CR>
+map <Leader>rr :A<CR>
+map <Leader>ra :R<CR>
