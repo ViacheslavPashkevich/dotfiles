@@ -1,0 +1,171 @@
+! ! Solarized color scheme for the X Window System
+! !
+! ! http://ethanschoonover.com/solarized
+! 
+! 
+! ! Common
+! 
+! #define S_yellow        #b58900
+! #define S_orange        #cb4b16
+! #define S_red           #dc322f
+! #define S_magenta       #d33682
+! #define S_violet        #6c71c4
+! #define S_blue          #268bd2
+! #define S_cyan          #2aa198
+! #define S_green         #859900
+! 
+! 
+! ! Dark
+! 
+! #define S_base03        #002b36
+! #define S_base02        #073642
+! #define S_base01        #586e75
+! #define S_base00        #657b83
+! #define S_base0         #839496
+! #define S_base1         #93a1a1
+! #define S_base2         #eee8d5
+! #define S_base3         #fdf6e3
+! 
+! 
+! ! Light
+! 
+! ! #define S_base03        #fdf6e3
+! ! #define S_base02        #eee8d5
+! ! #define S_base01        #93a1a1
+! ! #define S_base00        #839496
+! ! #define S_base0         #657b83
+! ! #define S_base1         #586e75
+! ! #define S_base2         #073642
+! ! #define S_base3         #002b36
+! 
+! 
+! ! To only apply colors to your terminal, for example, prefix
+! ! the color assignment statement with its name. Example:
+! !
+! ! URxvt*background:            S_base03
+! 
+! *background:              S_base03
+! *foreground:              S_base0
+! ! *fading:                  40
+! ! *fadeColor:               S_base03
+! *cursorColor:             S_base1
+! *pointerColorBackground:  S_base01
+! *pointerColorForeground:  S_base1
+! 
+! *color0:                  S_base02
+! *color1:                  S_red
+! *color2:                  S_green
+! *color3:                  S_yellow
+! *color4:                  S_blue
+! *color5:                  S_magenta
+! *color6:                  S_cyan
+! *color7:                  S_base2
+! *color8:                  S_base03
+! *color9:                  S_orange
+! *color10:                 S_base01
+! *color11:                 S_base00
+! *color12:                 S_base0
+! *color13:                 S_violet
+! *color14:                 S_base1
+! *color15:                 S_base3
+
+! Molokai theme
+URxvt*background		: #1B1D1E
+URxvt*foreground		: #F8F8F2
+! URxvt*cursorColor		: #FF0000
+! Black         0;30
+URxvt*color0			: #1B1D1E
+! Red           0;31
+URxvt*color1			: #B60050
+! Green         0;32
+URxvt*color2			: #88BB22
+! Brown         0;33
+URxvt*color3			: #C47F2C
+! Blue          0;34
+URxvt*color4			: #30309B
+! Purple        0;35
+URxvt*color5			: #7E40A5
+! Cyan          0;36
+URxvt*color6			: #4699AF
+! Light Gray    0;37
+URxvt*color7			: #9999AA
+
+! Dark Gray     1;30
+URxvt*color8			: #303030
+! Light Red     1;31
+URxvt*color9			: #F92672
+! Light Green   1;32
+URxvt*color10			: #80FF00
+! Yellow        1;33
+URxvt*color11			: #FFBA68
+! Light Blue    1;34
+URxvt*color12			: #7070F0
+! Light Purple  1;35
+URxvt*color13			: #BB88DD
+! Light Cyan    1;36
+URxvt*color14			: #66D9EF
+! White         1;37
+URxvt*color15			: #F8F8F2
+
+
+! disable yellow rectangles for input unicode symbols (need for Ctrl+Shift+key shortuts)
+URxvt.iso14755 : false
+
+! extensions
+URxvt*perl-ext: default,tabbedex,clipboard
+
+! clipboard
+URxvt.keysym.C-C:   perl:clipboard:copy
+URxvt.keysym.C-V:   perl:clipboard:paste
+URxvt.keysym.C-A-V: perl:clipboard:paste_escaped
+URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+URxvt.clipboard.autocopy: true
+
+! URxvt.tabbed.tabbar-fg: <colour-index, default 3>
+! URxvt.tabbed.tabbar-bg: <colour-index, default 0>
+URxvt.tabbed.tab-fg: 15
+URxvt.tabbed.tab-bg: 8
+
+URxvt*saveLines: 5000
+URxvt*font: xft:dejavu\ sans\ mono:size=9
+URxvt*boldFont: xft:dejavu\ sans\ mono:bold:size=9
+URxvt*scrollBar: false
+URxvt*letterSpace: -1
+
+! urxvt*geometry: 120x40
+
+
+
+! yeahconsole.tabbed.tabbar-fg: 2
+! yeahconsole.tabbed.tabbar-bg: 0
+! yeahconsole.tabbed.tab-fg:    3
+! yeahconsole.tabbed.tab-bg:    0
+
+yeahconsole*term: urxvt
+! yeahconsole.perl-ext-common: default,tabbed
+! yeahconsole*perl-ext: tabbed
+yeahconsole*consoleHeight: 30
+yeahconsole*xrandrSupport: 1
+yeahconsole*yOffset: 25
+yeahconsole*aniDelay: 0
+yeahconsole*stepSize: 0
+yeahconsole*toggleKey: Alt+grave
+! yeahconsole*background: #212121
+! yeahconsole*foreground: #C0C0C0
+! yeahconsole*cursorColor: #E6E3E6
+yeahconsole*restart: 1
+yeahconsole*keyFull: None+F11
+yeahconsole*keySmaller: Control+KP_Subtract
+yeahconsole*keyBigger: Control+KP_Add
+! yeahconsole*faceName: xft:dejavu\ sans\ mono:size=10
+! yeahconsole*boldFont: xft:dejavu\ sans\ mono:bold:size=10
+! yeahconsole*metaSendsEscape: true
+! yeahconsole*utf8: 2
+! yeahconsole*transparent: true
+! yeahconsole*shading: 4
+! yeahconsole*depth: 32
+! yeahconsole*letterSpace: -1
+
+
+
