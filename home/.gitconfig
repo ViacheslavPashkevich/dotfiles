@@ -12,10 +12,12 @@
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
-	main-window-view = HistoryView
+	main-window-view = FileView
 	history-view-vpane-position = 317
-	file-view-vpane-position = 625
+	file-view-vpane-position = 454
 [color]
 	ui = true
 [push]
 	default = simple
+[core]
+	excludesfile = /home/viacheslav/.gitignore_global

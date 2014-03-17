@@ -23,15 +23,24 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'lunaru/vim-twig'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'rking/ag.vim'
+Bundle 'Raimondi/delimitMate'
+
 " Surrounding parentheses, braces, quotes and so on.
 Bundle 'tpope/vim-surround'
+
 " Pretty statusline
 Bundle 'Lokaltog/powerline'
+
+" Snippets
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'bufexplorer.zip'
-" Bundle 'FuzzyFinder'
 Bundle 'kien/ctrlp.vim'
 " non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
@@ -63,6 +72,7 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 autocmd! bufwritepost vimrc source ~/.vimrc
 autocmd! bufwritepost bundles.vim source ~/.vimrc
 
+set t_Co=256
 syntax enable
 
 set background=dark
@@ -87,7 +97,7 @@ set guioptions-=m
 
 " status line
 set laststatus=2
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 " 2 spaces per tab
 set autoindent
@@ -110,11 +120,12 @@ set noswapfile
 " and undo history in them
 set hidden
 
-set history=10000
+" set history=10000
 
 " tab completion behavior
 set wildmenu
 set wildmode=full
+set re=1
 
 " Save on focus lost
 autocmd FocusLost * :wa
@@ -137,3 +148,6 @@ map <C-Tab> :BufExplorer<CR>
 map <Leader>f :NERDTreeFind<CR>
 map <Leader>rr :A<CR>
 map <Leader>ra :R<CR>
+map <Leader>s :wa<CR>
+
+map <Leader>c :CoffeeCompile<CR>

@@ -120,8 +120,15 @@ if [ -e ~/www/symfony2-autocomplete.bash ]; then
     . ~/www/symfony2-autocomplete.bash
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "/home/viacheslav/.rvm/scripts/rvm" ]] && source "/home/viacheslav/.rvm/scripts/rvm"
+# enable tmuxinator autocomplete
+if [ -e ~/.bash/tmuxinator.bash ]; then
+    . ~/.bash/tmuxinator.bash
+fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "/home/viacheslav/.rvm/scripts/rvm" ]] && source "/home/viacheslav/.rvm/scripts/rvm"
+
+export EDITOR=vim
